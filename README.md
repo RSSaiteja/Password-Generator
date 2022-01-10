@@ -1,3 +1,3 @@
 # Password-Generator
 
-Created a Password Generator using HTML, CSS, JavaScript
+for a quick preview click on the link below
