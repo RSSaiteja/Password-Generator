@@ -26,6 +26,7 @@ clipboard.addEventListener('click', () => {
 	document.execCommand('copy');
 	textarea.remove();
 	alert('Password copied to clipboard');
+	
 });
 
 generate.addEventListener('click', () => {
@@ -41,11 +42,14 @@ generate.addEventListener('click', () => {
 function generatePassword(lower, upper, number, symbol, length) {
 	let generatedPassword = '';
 	const typesCount = lower + upper + number + symbol;
+	console.log('typesCount:' , typesCount);
 	const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
+	console.log('TypesArr:', typesArr);
 	
 	// Doesn't have a selected type
 	if(typesCount === 0) {
-		return '';
+		
+		alert('Please Check atleast one item' );
 	}
 	
 	// create a loop
